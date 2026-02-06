@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package javaapplication105;
+package abstraccion.lab;
 
 /**
  *
  * @author user
  */
-public class JavaApplication105 {
+public class AbstraccionLab {
 
     /**
      * @param args the command line arguments
