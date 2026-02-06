@@ -124,10 +124,12 @@ public class VentanaJuego extends JFrame {
         tablero = new Carta[filas][columnas];
         cartas = new ArrayList<>();
         String[] Pokemons = {
-            "Pikachu", "Charmander", "Bulbasaur", "Squirtle", "Eevee", "Jigglypuff",
-            "Meowth", "Psyduck", "Snorlax", "Gengar", "Mewtwo",
-            "Dragonite", "Charizard", "Blastoise", "Venasour",
-            "Alakazam", "Machamp", "Gyarados"
+            "pikachu", "bulbassur", "caterpie", "charizard", "charmander", "chikorita",
+            "cyndaquill", "eevee", "gengar", "lucario", "nidoqueen",
+            "piplup", "psyduck", "sandshrew", "snorlax",
+            "squirtle", "totodile", "vaporeon", "zapdos"
+                
+                
         };
 
         // crear dos cartas de cada pokemon
@@ -277,17 +279,17 @@ public class VentanaJuego extends JFrame {
         String mensaje;
         String titulo;
         if (jugador1.getAciertos() > jugador2.getAciertos()) {
-            mensaje = "🏆 ¡" + jugador1.getNombre() + " ha ganado! 🏆\\n\\n"
+            mensaje = " ¡" + jugador1.getNombre() + " ha ganado! \\n\\n"
                     + jugador1.getPlayer() + ": " + jugador1.getAciertos() + " aciertos\\n"
                     + jugador2.getPlayer() + ": " + jugador2.getAciertos() + " aciertos";
             titulo = "Tenemos un ganador";
         } else if (jugador2.getAciertos() > jugador1.getAciertos()) {
-            mensaje = "🏆 ¡" + jugador2.getPlayer() + " ha ganado! 🏆\\n\\n"
+            mensaje = "¡" + jugador2.getPlayer() + " ha ganado! \\n\\n"
                     + jugador2.getPlayer() + ": " + jugador2.getAciertos() + " aciertos\\n"
                     + jugador1.getPlayer() + ": " + jugador1.getAciertos() + " aciertos";
             titulo = "Tenemos un ganador";
         } else {
-            mensaje = "\"🤝 ¡Empate! 🤝\\\\n\\\\n\"" + "Ambos jugadores tienen " + jugador1.getAciertos() + " aciertos\\n"
+            mensaje = "\" ¡Empate! \\\\n\\\\n\"" + "Ambos jugadores tienen " + jugador1.getAciertos() + " aciertos\\n"
                     + "¡Excelente partida!";
             titulo = "Empate";
         }
