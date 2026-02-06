@@ -14,7 +14,6 @@ public class Jugador {
  
  public Jugador(String Player){
      this.Player = Player;      
-     
      puntaje = 0; //igualmente
  }
  

@@ -64,15 +64,15 @@ public class VentanaJuego extends JFrame {
         panelInfo.setBackground(new Color(100, 150, 200));
         panelInfo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        Turnoactual = new JLabel("Turno: " + jugadoractual.getPlayer(), SwingConstants.CENTER);
+        Turnoactual = new JLabel("Turno: " + jugadoractual.obtenerNombrePlayer(), SwingConstants.CENTER);
         Turnoactual.setFont(new Font("Arial", Font.BOLD, 24));
         Turnoactual.setForeground(Color.WHITE);
 
-        puntajep1 = new JLabel(jugador1.getPlayer() + ": 0 aciertos", SwingConstants.CENTER);
+        puntajep1 = new JLabel(jugador1.obtenerNombrePlayer() + ": 0 aciertos", SwingConstants.CENTER);
         puntajep1.setFont(new Font("Arial", Font.BOLD, 20));
         puntajep1.setForeground(new Color(255, 255, 100));
 
-        puntajep2 = new JLabel(jugador2.getPlayer() + ": 0 aciertos", SwingConstants.CENTER);
+        puntajep2 = new JLabel(jugador2.obtenerNombrePlayer() + ": 0 aciertos", SwingConstants.CENTER);
         puntajep2.setFont(new Font("Arial", Font.BOLD, 20));
         puntajep2.setForeground(new Color(255, 255, 100));
 
@@ -126,10 +126,12 @@ public class VentanaJuego extends JFrame {
         tablero = new Carta[filas][columnas];
         cartas = new ArrayList<>();
         String[] Pokemons = {
-            "Pikachu", "Charmander", "Bulbasaur", "Squirtle", "Eevee", "Jigglypuff",
-            "Meowth", "Psyduck", "Snorlax", "Gengar", "Mewtwo",
-            "Dragonite", "Charizard", "Blastoise", "Venasour",
-            "Alakazam", "Machamp", "Gyarados"
+            "pikachu", "bulbassur", "caterpie", "charizard", "charmander", "chikorita",
+            "cyndaquill", "eevee", "gengar", "lucario", "nidoqueen",
+            "piplup", "psyduck", "sandshrew", "snorlax",
+            "squirtle", "totodile", "vaporeon", "zapdos"
+                
+                
         };
 
         // crear dos cartas de cada pokemon
@@ -220,7 +222,7 @@ public class VentanaJuego extends JFrame {
                         public void actionPerformed(ActionEvent e) {
                             jugadoractual.incrementarPuntaje();
                             actualizarpuntaje();
-                            JOptionPane.showMessageDialog(VentanaJuego.this, "Excelente" + jugadoractual.getPlayer() + "encontro una pareja, siga jugando", "pareja encontrada", JOptionPane.INFORMATION_MESSAGE);
+                            JOptionPane.showMessageDialog(VentanaJuego.this, "Excelente" + jugadoractual.obtenerNombrePlayer() + "encontro una pareja, siga jugando", "pareja encontrada", JOptionPane.INFORMATION_MESSAGE);
                             clicks = 0;
                             procesarturno = false;
 
@@ -266,30 +268,31 @@ public class VentanaJuego extends JFrame {
         } else {
             jugadoractual = jugador1;
         }
-        Turnoactual.setText("Turno: " + jugadoractual.getPlayer());
+        Turnoactual.setText("Turno: " + jugadoractual.obtenerNombrePlayer());
 
     }
 
     public void actualizarpuntaje() {
-        puntajep1.setText(jugador1.getPlayer() + ": " + jugador1.getAciertos() + " aciertos");
-        puntajep2.setText(jugador1.getPlayer() + ": " + jugador1.getAciertos() + " aciertos");
+        puntajep1.setText(jugador1.obtenerNombrePlayer() + ": " + jugador1.mostrarPuntaje() + " aciertos");
+        puntajep2.setText(jugador2.obtenerNombrePlayer() + ": " + jugador2.mostrarPuntaje() + " aciertos");
     }
 
     public void finalizarpartida() {
         String mensaje;
         String titulo;
-        if (jugador1.getAcietos() > jugador2.getAciertos()) {
-            mensaje = "🏆 ¡" + jugador1.getPlayer() + " ha ganado! 🏆\\n\\n"
-                    + jugador1.getPlayer() + ": " + jugador1.getAciertos() + " aciertos\\n"
-                    + jugador2.getPlayer() + ": " + jugador2.getAciertos() + " aciertos";
+
+        if (jugador1.mostrarPuntaje() > jugador2.mostrarPuntaje()) {
+            mensaje = "🏆 ¡" + jugador1.obtenerNombrePlayer() + " ha ganado! 🏆\\n\\n"
+                    + jugador1.obtenerNombrePlayer() + ": " + jugador1.mostrarPuntaje() + " aciertos\\n"
+                    + jugador2.obtenerNombrePlayer() + ": " + jugador2.mostrarPuntaje() + " aciertos";
             titulo = "Tenemos un ganador";
-        } else if (jugador2.getAciertos() > jugador1.getAciertos()) {
-            mensaje = "🏆 ¡" + jugador2.getPlayer() + " ha ganado! 🏆\\n\\n"
-                    + jugador2.getPlayer() + ": " + jugador2.getAciertos() + " aciertos\\n"
-                    + jugador1.getPlayer() + ": " + jugador1.getAciertos() + " aciertos";
+        } else if (jugador2.mostrarPuntaje() > jugador1.mostrarPuntaje()) {
+            mensaje = "¡" + jugador2.obtenerNombrePlayer() + " ha ganado! \\n\\n"
+                    + jugador2.obtenerNombrePlayer() + ": " + jugador2.mostrarPuntaje() + " aciertos\\n"
+                    + jugador1.obtenerNombrePlayer() + ": " + jugador1.mostrarPuntaje() + " aciertos";
             titulo = "Tenemos un ganador";
         } else {
-            mensaje = "\"🤝 ¡Empate! 🤝\\\\n\\\\n\"" + "Ambos jugadores tienen " + jugador1.getAciertos() + " aciertos\\n"
+            mensaje = "\" ¡Empate! \\\\n\\\\n\"" + "Ambos jugadores tienen " + jugador1.mostrarPuntaje() + " aciertos\\n"
                     + "¡Excelente partida!";
             titulo = "Empate";
         }
