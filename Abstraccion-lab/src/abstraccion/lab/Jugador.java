@@ -39,10 +39,6 @@ public class Jugador {
  public String toString(){
      return ("Jugador: " +Player + " Puntaje: " + puntaje);
  }
-
-    String getPlayer() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
  
  
 }

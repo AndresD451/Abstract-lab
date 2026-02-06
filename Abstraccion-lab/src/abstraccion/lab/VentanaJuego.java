@@ -9,6 +9,8 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.*;
 import javax.swing.*;
+import javax.swing.Timer;
+import java.util.TimerTask;
 
 /**
  *
@@ -101,7 +103,7 @@ public class VentanaJuego extends JFrame {
                     }
                 });
 
-                botones[1][j] = boton;
+                botones[i][j] = boton;
                 paneltablero.add(boton);
             }
         }
@@ -222,7 +224,7 @@ public class VentanaJuego extends JFrame {
                             clicks = 0;
                             procesarturno = false;
 
-                            if (juegoterminado()) {
+                            if (juegoTerminado()) {
                                 finalizarpartida();
                             }
                         }
@@ -236,7 +238,7 @@ public class VentanaJuego extends JFrame {
                             carta2.setDescubierta(false);
                             boton1.setIcon(carta1.ocultarCarta());
                             boton1.setText("?");
-                            boton2.setIcon(carta1.ocultarCarta());
+                            boton2.setIcon(carta2.ocultarCarta());
                             boton2.setText("?");
 
                             clicks = 0;
@@ -276,8 +278,8 @@ public class VentanaJuego extends JFrame {
     public void finalizarpartida() {
         String mensaje;
         String titulo;
-        if (jugador1.getAciertos() > jugador2.getAciertos()) {
-            mensaje = "🏆 ¡" + jugador1.getNombre() + " ha ganado! 🏆\\n\\n"
+        if (jugador1.getAcietos() > jugador2.getAciertos()) {
+            mensaje = "🏆 ¡" + jugador1.getPlayer() + " ha ganado! 🏆\\n\\n"
                     + jugador1.getPlayer() + ": " + jugador1.getAciertos() + " aciertos\\n"
                     + jugador2.getPlayer() + ": " + jugador2.getAciertos() + " aciertos";
             titulo = "Tenemos un ganador";
