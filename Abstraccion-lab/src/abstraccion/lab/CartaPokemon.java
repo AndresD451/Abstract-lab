@@ -25,7 +25,9 @@ public class CartaPokemon extends Carta {
             Image img=imagenOriginal.getImage().getScaledInstance(100,100, Image.SCALE_SMOOTH);
             this.imagen=new ImageIcon(img);
             if(reverso==null){
-                ImageIcon reversoOriginal=new ImageIcon(getClass().getResource("/imagen/reverso"));
+                ImageIcon reversoOriginal=new ImageIcon(getClass().getResource("/imagen/reverso.png"));
+                Image imgReverso=reversoOriginal.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+                reverso=new ImageIcon(imgReverso);
             }
             
         }
