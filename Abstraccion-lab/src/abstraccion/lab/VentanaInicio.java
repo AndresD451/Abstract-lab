@@ -74,7 +74,7 @@ public class VentanaInicio extends JFrame {
           btnIniciar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               // iniciarJuego();
+               iniciarJuego();
             }
         });
         
@@ -92,7 +92,26 @@ public class VentanaInicio extends JFrame {
         
     }
         
+    private void iniciarJuego(){
+        String nombreJugador1 = jugador1.getText().trim();
+        String nombreJugador2 = jugador2.getText().trim();
         
+        if (nombreJugador1.isEmpty() || nombreJugador2.isEmpty())
+            JOptionPane.showMessageDialog(rootPane, "Algun jugador no tiene nombre");
+        
+        if(nombreJugador1.equals(nombreJugador2))
+            JOptionPane.showMessageDialog(rootPane, "Los nombres no pueden repetirse");
+            
+        Jugador jugador1 = new Jugador(nombreJugador1);
+        Jugador jugador2 = new Jugador(nombreJugador2);
+        
+ VentanaJuego ventanaJuego = new VentanaJuego(jugador1, jugador2);
+ventanaJuego.setVisible(true);
+dispose();
+        
+        
+        
+    }
         
         
     }
