@@ -10,5 +10,8 @@ package abstraccion.lab;
  * @author andres
  */
 public interface ControlJuego {
-    
+    void iniciarJuego();
+    void controlarTurnos();
+    boolean verificarPareja(Carta carta1, Carta carta2);
+    void finalizarPartida();
 }

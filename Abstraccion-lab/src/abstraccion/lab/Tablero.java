@@ -10,5 +10,8 @@ package abstraccion.lab;
  * @author andres
  */
 public interface Tablero {
-    
+    void inicializarTablero();
+    void revolverCartars();
+    void actualizarTablero();
+    boolean juegoTerminado();
 }

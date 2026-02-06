@@ -19,7 +19,7 @@ public abstract class Carta {
        this.descubierta=false;
    }
    public abstract ImageIcon mostrarCarta();
-   public abstract ImageIcon ocultarCarte();
+   public abstract ImageIcon ocultarCarta();
    public boolean estaDescubierta(){
        return descubierta;
    }

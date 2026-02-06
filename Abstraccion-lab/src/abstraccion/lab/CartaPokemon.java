@@ -12,10 +12,46 @@ import java.awt.Image;
  */
 public class CartaPokemon extends Carta {
     private String nombrePokemon;
-    private static ImageIcon reversa;
+    private static ImageIcon reverso;
     public CartaPokemon(String id, String nombrePokemon){
         super(id);
         this.nombrePokemon=nombrePokemon;
         cargarImagenes();
     }
+    private void cargarImagenes(){
+        try{
+            String rutaImagen="/imagenes/"+nombrePokemon.toLowerCase()+".png";
+            ImageIcon imagenOriginal=new ImageIcon(getClass().getResource(rutaImagen));
+            Image img=imagenOriginal.getImage().getScaledInstance(100,100, Image.SCALE_SMOOTH);
+            this.imagen=new ImageIcon(img);
+            if(reverso==null){
+                ImageIcon reversoOriginal=new ImageIcon(getClass().getResource("/imagen/reverso"));
+            }
+            
+        }
+        catch(Exception e){
+            System.out.println("Error al cargar imagen: "+nombrePokemon);
+            this.imagen=new ImageIcon();
+            if(reverso==null){
+                reverso=new ImageIcon();
+            }
+            
+        }
+    }
+
+    @Override
+    public ImageIcon mostrarCarta() {
+         this.descubierta=true;
+         return imagen;
+    }
+
+    @Override
+    public ImageIcon ocultarCarta(){
+        this.descubierta=false;
+        return reverso;
+    }
+    public String getNombrePokemon(){
+        return nombrePokemon;
+    }
+    
 }
