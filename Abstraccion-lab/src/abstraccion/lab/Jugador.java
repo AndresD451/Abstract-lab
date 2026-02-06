@@ -10,11 +10,16 @@ package abstraccion.lab;
  */
 public class Jugador {
  private String Player;
- public int puntaje; //revisar despues la diferencia de public
+ public int puntaje; 
  
  public Jugador(String Player){
      this.Player = Player;      
+<<<<<<< HEAD
      puntaje = 0; //igualmente
+=======
+     
+     puntaje = 0;
+>>>>>>> 797e3c612495822b53b81bf51082eb8eaf9d604f
  }
  
  public String obtenerNombrePlayer(){
@@ -38,6 +43,13 @@ public class Jugador {
  public String toString(){
      return ("Jugador: " +Player + " Puntaje: " + puntaje);
  }
+<<<<<<< HEAD
+=======
+
+    String getPlayer() {
+        return Player;
+    }
+>>>>>>> 797e3c612495822b53b81bf51082eb8eaf9d604f
  
  
 }
