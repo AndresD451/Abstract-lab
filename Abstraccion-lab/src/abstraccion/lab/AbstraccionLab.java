@@ -14,9 +14,8 @@ public class AbstraccionLab {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Jugador jugador = new Jugador("Pablo");
-        
-        System.out.println(jugador.toString());
+    VentanaInicio j = new VentanaInicio();
+    j.setVisible(true);
         
     }
     
