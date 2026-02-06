@@ -20,12 +20,12 @@ public class CartaPokemon extends Carta {
     }
     private void cargarImagenes(){
         try{
-            String rutaImagen="/imagenes/"+nombrePokemon.toLowerCase()+".png";
+            String rutaImagen="/abstraccion/lab/resources/imagenes/"+nombrePokemon.toLowerCase()+".png";
             ImageIcon imagenOriginal=new ImageIcon(getClass().getResource(rutaImagen));
             Image img=imagenOriginal.getImage().getScaledInstance(100,100, Image.SCALE_SMOOTH);
             this.imagen=new ImageIcon(img);
             if(reverso==null){
-                ImageIcon reversoOriginal=new ImageIcon(getClass().getResource("/imagen/reverso.png"));
+                ImageIcon reversoOriginal=new ImageIcon(getClass().getResource("/abstraccion/lab/resources/imagenes/reverso.png"));
                 Image imgReverso=reversoOriginal.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
                 reverso=new ImageIcon(imgReverso);
             }
