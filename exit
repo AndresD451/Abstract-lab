@@ -1,0 +1,84 @@
+[33mcommit 3d5b8f17b9d9f91da818ed3bb15d5ebc0d88d492[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Marco Vásquez <marco_vasquez1@unitec.edu>
+Date:   Fri Feb 6 11:26:07 2026 -0600
+
+    Imagenes
+
+[33mcommit 87e89c5405e016b93e92592ff0c910c7d3951473[m
+Author: Marco Vásquez <marco_vasquez1@unitec.edu>
+Date:   Fri Feb 6 11:22:14 2026 -0600
+
+    Adicion de 6 imagenes
+
+[33mcommit 00468dedef6bb0480ac55b05f2e5d728b8919748[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Andrés Díaz <andresalbertodiazrevelo@gmail.com>
+Date:   Fri Feb 6 11:16:35 2026 -0600
+
+    Actualizacion de VentanaInicio
+
+[33mcommit cf870116dfe2205f50209cb6c1d0a68073985e1d[m
+Merge: e2a3720 9fa941d
+Author: Diego Bejarano <diegoalejandrop78@gmail.com>
+Date:   Fri Feb 6 10:58:17 2026 -0600
+
+    Merge branch 'main' of https://github.com/AndresD451/Abstract-lab
+
+[33mcommit e2a37206ef9d45add730018f269d82bcd03d96d0[m
+Author: Diego Bejarano <diegoalejandrop78@gmail.com>
+Date:   Fri Feb 6 10:56:09 2026 -0600
+
+    Clase VentanaJuego aun en proceso
+
+[33mcommit 9fa941d0848e19899171a51b19594d3cba6a8485[m
+Author: Marco Vásquez <marco_vasquez1@unitec.edu>
+Date:   Fri Feb 6 10:45:41 2026 -0600
+
+    correciones
+
+[33mcommit 02fd2b9033f72e60e31588cd7b593f011ce83770[m
+Author: Marco Vásquez <marco_vasquez1@unitec.edu>
+Date:   Fri Feb 6 10:31:43 2026 -0600
+
+    Imagenes y correciones
+
+[33mcommit 0c2ee9f92645c9264ddcaeaecc08075bde6ec4c5[m
+Author: Andrés Díaz <andresalbertodiazrevelo@gmail.com>
+Date:   Fri Feb 6 10:02:45 2026 -0600
+
+    Ventana de inicio
+
+[33mcommit 397f00e0ca7f63099d610477d4f2e6f72d997080[m
+Author: Marco Vásquez <marco_vasquez1@unitec.edu>
+Date:   Fri Feb 6 09:45:19 2026 -0600
+
+    correción codigo
+
+[33mcommit 270c7155800a279e85b7c57c3f47ed40e843c6a1[m
+Author: Marco Vásquez <marco_vasquez1@unitec.edu>
+Date:   Fri Feb 6 09:41:42 2026 -0600
+
+    Clases abstractas e interfaces
+
+[33mcommit 2e8a6feb6b48d48e5618facb51a489e5fcbe028b[m
+Author: Andrés Díaz <andresalbertodiazrevelo@gmail.com>
+Date:   Fri Feb 6 09:29:12 2026 -0600
+
+    Clase Jugador
+
+[33mcommit 2969c61d4882c8318cbe89e8b0eea7554d1211b5[m
+Author: Andrés Díaz <andresalbertodiazrevelo@gmail.com>
+Date:   Fri Feb 6 08:33:29 2026 -0600
+
+    arreglo de nombre
+
+[33mcommit a0ab2ee3bcc7810c77c569396432e3227f54c8bc[m
+Author: Andrés Díaz <andresalbertodiazrevelo@gmail.com>
+Date:   Fri Feb 6 08:32:02 2026 -0600
+
+    Archivo de proyecto
+
+[33mcommit 287450414f4d4157b4e029d78e75b65f3d4d15c7[m
+Author: Andrés Díaz <andresalbertodiazrevelo@gmail.com>
+Date:   Fri Feb 6 08:29:16 2026 -0600
+
+    repositorio
