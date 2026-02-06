@@ -10,12 +10,12 @@ package abstraccion.lab;
  */
 public class Jugador {
  private String Player;
- public int puntaje; //revisar despues la diferencia de public
+ public int puntaje; 
  
  public Jugador(String Player){
      this.Player = Player;      
      
-     puntaje = 0; //igualmente
+     puntaje = 0;
  }
  
  public String obtenerNombrePlayer(){
@@ -41,7 +41,7 @@ public class Jugador {
  }
 
     String getPlayer() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return Player;
     }
  
  
