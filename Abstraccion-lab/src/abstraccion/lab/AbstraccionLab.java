@@ -14,7 +14,10 @@ public class AbstraccionLab {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Jugador jugador = new Jugador("Pablo");
+        
+        System.out.println(jugador.toString());
+        
     }
     
 }
